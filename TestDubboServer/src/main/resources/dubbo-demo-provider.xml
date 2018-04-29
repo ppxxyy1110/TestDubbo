@@ -9,5 +9,5 @@
     <dubbo:protocol name="dubbo" port="20880"/>
     <!-- <dubbo:service interface="com.alibaba.dubbo.demo.DemoService" ref="demoService"/> -->
     <dubbo:service interface="com.alibaba.dubbo.demo.DemoService" ref="demoService" registry="zk1" />
-    <bean id="demoService" class="com.alibaba.dubbo.demo.provider.DemoServiceImpl"/>
+    <bean id="demoService" class="com.alibaba.dubbo.demo.serviceimpl.DemoServiceImpl"/>
 </beans>

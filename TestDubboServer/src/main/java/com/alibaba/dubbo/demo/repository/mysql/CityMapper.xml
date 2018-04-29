@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.alibaba.dubbo.demo.repository.mysql.CityMapper" >
+  <resultMap id="BaseResultMap" type="com.alibaba.dubbo.entity.mysql.City" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="Name" property="name" jdbcType="VARCHAR" />
+    <result column="CountryCode" property="countryCode" jdbcType="VARCHAR" />
+    <result column="District" property="district" jdbcType="VARCHAR" />
+    <result column="Population" property="population" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    `id`,`Name`,`CountryCode`,`District`,`Population`
+  </sql>
+  
+  <sql id="Base_Column_List_With_Alias" >
+    ${alias}.`id`, ${alias}.`Name`, ${alias}.`CountryCode`, ${alias}.`District`, ${alias}.`Population`
+  </sql>
+  
+  <select id="selectById" resultMap="BaseResultMap" >
+  	select * from city where id=#{id}
+  </select>
+  
+  <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+  	insert into city 
+	(`Name`,`CountryCode`,`District`,`Population`)
+	 VALUES (#{name}, #{countryCode},#{district},#{population})
+  </insert>
+  <update id="update">
+  	update city set
+	  	Name=#{name},
+	  	CountryCode=#{countryCode},
+	  	District=#{district},
+	  	Population=#{population}
+  	where id=#{id}
+  </update>
+  
+</mapper>

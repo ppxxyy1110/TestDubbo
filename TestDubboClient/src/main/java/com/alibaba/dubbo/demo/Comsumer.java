@@ -1,4 +1,4 @@
-package TestDubbo.TestDubboClient;
+package com.alibaba.dubbo.demo;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -8,7 +8,7 @@ import com.alibaba.dubbo.demo.DemoService;
  * Hello world!
  *
  */
-public class App {
+public class Comsumer {
     public static void main( String[] args ) {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
                 new String[]{"dubbo-demo-consumer.xml"});

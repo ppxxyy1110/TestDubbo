@@ -1,0 +1,7 @@
+server:
+  port: 9094
+spring:
+  application:
+    name: testdubbo-consumer
+logging:
+  config: classpath:log4j2.xml
