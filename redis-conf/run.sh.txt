@@ -1,0 +1,16 @@
+启动主节点
+sudo redis-server redis-6379.conf
+
+使用PING命令检测是否启动
+➜   redis-cli -h 127.0.0.1 -p 6379 ping
+PONG
+
+启动两个从节点
+➜   sudo redis-server redis-6380.conf 
+➜   sudo redis-server redis-6381.conf
+
+
+如果是通过源码安装的redis，则可以通过redis的客户端程序redis-cli的shutdown命令来重启redis
+
+redis-cli -h 127.0.0.1 -p 6379 
+shutdown
