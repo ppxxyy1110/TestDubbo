@@ -11,11 +11,13 @@ package com.alibaba.dubbo.demo.conf;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.ImportResource;
+import org.springframework.context.annotation.PropertySource;
 
 
 @Configuration
-@EnableConfigurationProperties({DatasourceConfig.class})
+@EnableConfigurationProperties({DatasourceConfig.class/*,RedisConfig.class*/})
 @ImportResource({"classpath:dubbo-demo-provider.xml"})
+@PropertySource(value = { "classpath:redis.properties" })
 public class AppConfiguation {
 
 }
