@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.100.19:3306/world2?autoReconnect=true&autoReconnectForPools=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull
+    username: ppxxyy1110
+    password: 451279qwepxy
+    
+     
+mybatis:
+  # type-aliases-package: com.midea.smart.ouer.entity
+  configuration:
+    map-underscore-to-camel-case: true
+    default-fetch-size: 100
+    default-statement-timeout: 30
+    
+logging:
+  config: classpath:log4j2.xml
