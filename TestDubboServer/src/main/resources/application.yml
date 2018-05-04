@@ -3,3 +3,5 @@ spring:
     active: dev
   application:
     name: testdubbo-provider
+server
+  port: 8080
