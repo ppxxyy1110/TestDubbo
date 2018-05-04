@@ -1,6 +1,8 @@
 server:
-  port: 9094
+  port: 9096
 spring:
+  profiles:
+    active: dev
   application:
     name: testdubbo-consumer
 logging:

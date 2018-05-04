@@ -1,1 +1,8 @@
 root/perfTest123
+
+scp local_file remote_username@remote_ip:remote_folder
+
+scp -r local_dir remote_username@remote_ip:remote_folder
+
+ssh root@remoteIP -p 22
+tar -zxvf redis-4.0.9.tar.gz -C redis
