@@ -1,0 +1,10 @@
+server:
+  port: 9096
+spring:
+  application:
+    name: testdubbo-consumer
+logging:
+  config: classpath:log4j2.xml
+dubbo:
+  zookeeper:
+    address: 192.168.100.21:2181
